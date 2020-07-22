@@ -8,20 +8,25 @@
   </head>
   <body>
     <div id="wrapper" :title="uchiha+' '+ 'siska'">
-      {{message+cal+penis}}
-      <h1 v-if="status">property is true</h1>
-      <h1 v-else="status">property is false</h1>
+      <ul>
+        <li v-for="(item, index) in list">index{{index}}: {{item}}</li>
+      </ul>
+
+      <ul>
+        <li v-for="user in users">{{user.id}}: {{user.name}}</li>
+      </ul>
     </div>
 
     <script>
       var app = new Vue({
         el: "#wrapper",
         data: {
-          message: "Hello Vue ! ",
-          cal: "cal ",
-          penis: "penis",
-          uchiha: "saske",
-          status: 1,
+          list: ["one", "two", "free"],
+          users: [
+            { id: 1, name: "Elizar" },
+            { id: 2, name: "Potachok" },
+            { id: 3, name: "JA-ja Bincks" },
+          ],
         },
       });
     </script>
