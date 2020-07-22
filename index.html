@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="wrapper" :title="uchiha+' '+ 'siska'">
+      {{message+cal+penis}}
+      <h1 v-if="status">property is true</h1>
+      <h1 v-else="status">property is false</h1>
+    </div>
+
+    <script>
+      var app = new Vue({
+        el: "#wrapper",
+        data: {
+          message: "Hello Vue ! ",
+          cal: "cal ",
+          penis: "penis",
+          uchiha: "saske",
+          status: 1,
+        },
+      });
+    </script>
+  </body>
+</html>
